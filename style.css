@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.navbar {
+  background: #2d2d2d;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.nav-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  position: relative;
+  text-align: center;
+  color: #222;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0077ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 3px solid black;
+  margin-left:40%;
+}
+
+.education-item {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 4px solid #0077ff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.skill-cards, .certificate-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill-card, .certificate-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover, .certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 4px solid #0077ff;
+}
+
+.skill-card h3, .certificate-card h3 {
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  background: #0077ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-links a:hover {
+  background: #0056c9;
+}
+
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    margin-bottom: 15px;
+    margin-left:0%;
+  }
+}
